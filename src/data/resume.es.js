@@ -1,0 +1,125 @@
+export const resume = {
+  meta: {
+    locale: 'es',
+    pdfPath: 'resume-es.pdf',
+  },
+  name: 'Simón Rodil',
+  title: 'Desarrollador Web y Especialista en Email Marketing',
+  typingRoles: [
+    'Desarrollador Web',
+    'Desarrollador de Emails',
+    'Especialista React',
+    'Full-Stack',
+  ],
+  summary:
+    'Ingeniero en Informática apasionado por crear soluciones digitales innovadoras. Transformo retos complejos en experiencias fluidas y fáciles de usar en desarrollo web, email responsive, bases de datos y hosting. Multilingüe (español, inglés y francés) y habituado a trabajar con equipos internacionales.',
+  contact: {
+    email: 'hello@simonrodil.org',
+    location: 'Remoto · Con base en España',
+    linkedin: 'https://linkedin.com/in/simonrodil',
+    github: 'https://github.com/simonrodil',
+    instagram: 'https://instagram.com/simonrodil',
+    devto: 'https://dev.to/simonrodil',
+  },
+  nav: [
+    { id: 'about', label: 'Sobre mí' },
+    { id: 'experience', label: 'Experiencia' },
+    { id: 'education', label: 'Educación' },
+    { id: 'projects', label: 'Proyectos' },
+    { id: 'contact', label: 'Contacto' },
+  ],
+  stats: [
+    { value: 5, suffix: '+', label: 'Años de experiencia' },
+    { value: 15, suffix: '+', label: 'Proyectos entregados' },
+    { value: 3, suffix: '', label: 'Idiomas' },
+    { value: 8, suffix: '+', label: 'Plataformas de email' },
+  ],
+  skills: {
+    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Liquid'],
+    backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
+    email: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML'],
+    tools: ['Figma', 'Photoshop', 'Git', 'VS Code', 'jQuery'],
+  },
+  languages: [
+    { name: 'Español', level: 'Nativo' },
+    { name: 'Inglés', level: 'Profesional' },
+    { name: 'Francés', level: 'Profesional' },
+  ],
+  experience: [
+    {
+      company: 'CodeCrew',
+      role: 'Desarrollador de Email',
+      period: '2024 — Actualidad',
+      bullets: [
+        'Creo plantillas de email responsive y compatibles con los principales clientes de correo.',
+        'Desarrollo flujos automatizados y campañas optimizadas para entrega y engagement.',
+        'Colaboro con diseño y estrategia para entregar HTML listo para producción.',
+      ],
+    },
+    {
+      company: 'Freelance y clientes',
+      role: 'Desarrollador Web',
+      period: '2020 — Actualidad',
+      bullets: [
+        'Entrego sitios full-stack con PHP, Laravel, WordPress y Shopify.',
+        'Configuro dominios, hosting y CMS según las necesidades de cada negocio.',
+        'Construyo frontends dinámicos con JavaScript, Tailwind y patrones modernos.',
+      ],
+    },
+    {
+      company: 'Proyectos independientes',
+      role: 'Desarrollador Full-Stack',
+      period: '2019 — Actualidad',
+      bullets: [
+        'Publico sitios para ONG y comercio con interfaces responsive y accesibles.',
+        'Mantengo código claro y enfocado en rendimiento.',
+      ],
+    },
+  ],
+  education: [
+    {
+      degree: 'Ingeniería en Informática',
+      institution: 'Universidad de las Ciencias Informáticas',
+      year: 'Graduado',
+    },
+  ],
+  projects: [
+    {
+      name: 'Sitio CFC Massachusetts',
+      description:
+        'Sitio PHP para una organización comunitaria con páginas multilingües y diseño a medida.',
+      url: 'https://cfcmass.org',
+      tags: ['PHP', 'Web', 'Cliente'],
+    },
+    {
+      name: 'Extensión Email Optimizer para VS Code',
+      description:
+        'Extensión que ayuda a optimizar markup de email HTML directamente en el editor.',
+      url: 'https://marketplace.visualstudio.com/search?term=email%20optimizer%20simon',
+      tags: ['TypeScript', 'VS Code', 'Email'],
+    },
+    {
+      name: 'Portfolio v3',
+      description:
+        'Portfolio personal animado con Tailwind, jQuery y diseño responsive.',
+      url: 'https://simonrodil.github.io/Simon-Rodil-Portfolio-v3/',
+      tags: ['HTML', 'CSS', 'JavaScript'],
+    },
+  ],
+  labels: {
+    downloadPdf: 'Descargar PDF',
+    about: 'Sobre mí',
+    experience: 'Experiencia',
+    education: 'Educación',
+    projects: 'Proyectos',
+    contact: 'Contacto',
+    skills: 'Habilidades',
+    languages: 'Idiomas',
+    connect: 'Conectar',
+    viewProject: 'Ver proyecto',
+    close: 'Cerrar',
+    hello: 'Hola,',
+    im: 'soy',
+    footer: 'Todos los derechos reservados.',
+  },
+}
