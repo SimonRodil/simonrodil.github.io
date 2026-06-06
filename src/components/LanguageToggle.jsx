@@ -8,25 +8,27 @@ export function LanguageToggle() {
     <button
       type="button"
       onClick={toggleLang}
-      className="relative flex h-9 w-[4.5rem] items-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-1 text-xs font-medium text-[var(--color-muted)] transition-colors hover:border-[var(--color-accent-dim)]"
-      aria-label={lang === 'en' ? 'Switch to Spanish' : 'Cambiar a inglés'}
+      className="flex items-center gap-1.5 text-xs font-medium text-[var(--color-muted)] hover:text-[var(--color-text)] transition-colors"
+      aria-label={lang === 'en' ? 'Cambiar a español' : 'Switch to English'}
     >
+      <svg
+        width="14" height="14" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" strokeWidth="2"
+        strokeLinecap="round" strokeLinejoin="round"
+      >
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+        <path d="M2 12h20"/>
+      </svg>
       <motion.span
-        layout
-        className="absolute top-1 left-1 h-7 w-[calc(50%-4px)] rounded-full bg-[var(--color-accent)]"
-        animate={{ x: lang === 'en' ? 0 : 'calc(100% + 4px)' }}
-        transition={{ type: 'spring', stiffness: 420, damping: 32 }}
-      />
-      <span
-        className={`relative z-10 flex-1 text-center ${lang === 'en' ? 'text-[var(--color-bg)]' : ''}`}
+        key={lang}
+        initial={{ opacity: 0, y: -4 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 4 }}
+        transition={{ duration: 0.15 }}
       >
-        EN
-      </span>
-      <span
-        className={`relative z-10 flex-1 text-center ${lang === 'es' ? 'text-[var(--color-bg)]' : ''}`}
-      >
-        ES
-      </span>
+        {lang === 'en' ? 'ES' : 'EN'}
+      </motion.span>
     </button>
   )
 }
