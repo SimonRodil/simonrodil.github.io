@@ -86,7 +86,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="relative min-h-screen overflow-x-hidden">
-        <BackgroundGlow />
+        {/* <BackgroundGlow /> */}
         <div className="relative z-10">
           <Header />
           <MainContent />
