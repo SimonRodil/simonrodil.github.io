@@ -68,16 +68,7 @@ export const resume = {
         'Construyo frontends dinámicos con JavaScript, Tailwind y patrones modernos.',
         'Manejo y Administración de base de datos en SQL'
       ],
-    },
-    {
-      company: 'Proyectos independientes',
-      role: 'Desarrollador Full-Stack',
-      period: '2019 — Actualidad',
-      bullets: [
-        'Publico sitios para ONG y comercio con interfaces responsive y accesibles.',
-        'Mantengo código claro y enfocado en rendimiento.',
-      ],
-    },
+    }
   ],
   education: [
     {
