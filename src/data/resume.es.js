@@ -51,22 +51,23 @@ export const resume = {
       role: 'Desarrollador Frontend',
       period: '2021 — Actualidad',
       bullets: [
-        'Desarrollo de Soluciones en Wordpress para personalizacion de Sitios web',
-        'Manejo de Plantillas en Shopify para personalizacion de tiendas en linea',
-        'Creo plantillas de email responsive y compatibles con los principales clientes de correo.',
-        'Desarrollo flujos automatizados y campañas optimizadas para entrega y engagement.',
-        'Colaboro con diseño y estrategia para entregar HTML con AMPScript listo para producción.',
+        'Desarrollo de Soluciones en Wordpress para personalizacion de Sitios web.',
+        'Manejo de Plantillas en Shopify para personalizacion de tiendas en linea.',
+        'Desarrollo de plantillas de email responsive y compatibles con los principales clientes de correo.',
+        'Uso de APIs para campañas y workflows/journeys en CRMs como Iterable y Salesforce.',
+        'Colaboro con diseño y estrategia para entregar HTML con AMPScript listo para su personalización.',
       ],
     },
     {
       company: 'Freelance y clientes',
       role: 'Desarrollador Web Full-Stack',
-      period: '2020 — Actualidad',
+      period: '2018 — Actualidad',
       bullets: [
-        'Entrego sitios full-stack con PHP, Laravel, WordPress y Shopify.',
-        'Configuro dominios, hosting y CMS según las necesidades de cada negocio.',
+        'Desarrollo de sitios full-stack con PHP, Laravel, WordPress y tiendas en Shopify.',
+        'Configuro dominios, hosting y CMS según las necesidades de cada niche.',
         'Construyo frontends dinámicos con JavaScript, Tailwind y patrones modernos.',
-        'Manejo y Administración de base de datos en SQL'
+        'Manejo y Administración de base de datos en SQL',
+        'Optimizacion de hosting para carga mas rapida de sus proyectos.'
       ],
     }
   ],

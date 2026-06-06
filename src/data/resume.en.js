@@ -51,9 +51,11 @@ export const resume = {
       role: 'Frontend Developer',
       period: '2021 — Present',
       bullets: [
-        'Build responsive, cross-client email templates for major marketing platforms.',
-        'Develop automated flows and campaign assets optimized for deliverability and engagement.',
-        'Collaborate with designers and strategists to ship production-ready HTML emails.',
+        'WordPress Solutions Development for Website Customization.',
+        'Managing Shopify templates for online store customization.',
+        'Development of responsive email templates compatible with major email clients.',
+        'Using APIs for campaigns and workflows/journeys in CRMs like Iterable and Salesforce.',
+        'I collaborate on design and strategy to deliver HTML with AMPScript ready for customization.',
       ],
     },
     {
@@ -61,9 +63,11 @@ export const resume = {
       role: 'Fullstack Web Developer',
       period: '2018 — Present',
       bullets: [
-        'Deliver full-stack websites with PHP, Laravel, WordPress, and Shopify.',
-        'Set up domains, hosting, and CMS configurations for diverse business needs.',
-        'Create dynamic frontends with JavaScript, Tailwind, and modern component patterns.',
+        'Full-stack website development using PHP, Laravel, WordPress, and Shopify stores.',
+        'Set up domains, hosting, and CMS according to the needs of each niche.',
+        'Build dynamic frontends with JavaScript, Tailwind, and modern design patterns.',
+        'SQL Database Management and Administration.',
+        'Hosting optimization for faster loading of your projects.'
       ],
     },
   ],
