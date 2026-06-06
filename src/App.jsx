@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { BackgroundGlow } from './components/BackgroundGlow'
+/* import { BackgroundGlow } from './components/BackgroundGlow' */
 import { AnimatedCounter } from './components/AnimatedCounter'
 import { ExperienceTimeline } from './components/ExperienceTimeline'
 import { Footer } from './components/Footer'
