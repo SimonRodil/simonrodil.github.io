@@ -28,4 +28,4 @@ Enable **Settings → Pages → Source: GitHub Actions** on the repository.
 
 Edit `src/data/resume.en.js` and `src/data/resume.es.js`.
 
-Replace PDFs in `public/resume-en.pdf` and `public/resume-es.pdf`.
+Replace CVs in `public/resume-en.pdf` and `public/resume-es.pdf`.

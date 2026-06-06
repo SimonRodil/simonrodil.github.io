@@ -6,15 +6,15 @@ export const resume = {
   name: 'Simón Rodil',
   title: 'Web Developer & Email Marketing Specialist',
   typingRoles: [
+    'Full-Stack Developer',
     'Web Developer',
     'Email Developer',
-    'React Specialist',
-    'Full-Stack Builder',
+    'React Learner',
   ],
   summary:
     'Informatics Engineer passionate about crafting innovative digital solutions. I turn complex challenges into seamless, user-friendly experiences across web development, responsive email, databases, and hosting. Multilingual (Spanish, English, French) and comfortable collaborating with international teams.',
   contact: {
-    email: 'hello@simonrodil.org',
+    email: 'simon.rodil@icloud.com',
     location: 'Available remotely · Based in Spain',
     linkedin: 'https://linkedin.com/in/simonrodil',
     github: 'https://github.com/simonrodil',
@@ -30,26 +30,26 @@ export const resume = {
   ],
   stats: [
     { value: 5, suffix: '+', label: 'Years Experience' },
-    { value: 15, suffix: '+', label: 'Projects Delivered' },
+    { value: 35, suffix: '+', label: 'Projects Delivered' },
     { value: 3, suffix: '', label: 'Languages' },
-    { value: 8, suffix: '+', label: 'Email Platforms' },
+    { value: 8, suffix: '+', label: 'Programming Languages' },
   ],
   skills: {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Liquid'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript', 'SSJS'],
     backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
-    email: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML'],
-    tools: ['Figma', 'Photoshop', 'Git', 'VS Code', 'jQuery'],
+    email: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce'],
+    tools: ['Figma', 'Photoshop', 'Git', 'Claude'],
   },
   languages: [
     { name: 'Spanish', level: 'Native' },
     { name: 'English', level: 'Professional' },
-    { name: 'French', level: 'Professional' },
+    { name: 'French', level: 'Intermediate' },
   ],
   experience: [
     {
       company: 'CodeCrew',
-      role: 'Email Developer',
-      period: '2024 — Present',
+      role: 'Frontend Developer',
+      period: '2021 — Present',
       bullets: [
         'Build responsive, cross-client email templates for major marketing platforms.',
         'Develop automated flows and campaign assets optimized for deliverability and engagement.',
@@ -57,22 +57,13 @@ export const resume = {
       ],
     },
     {
-      company: 'Freelance & Client Work',
-      role: 'Web Developer',
-      period: '2020 — Present',
+      company: 'Freelance',
+      role: 'Fullstack Web Developer',
+      period: '2018 — Present',
       bullets: [
         'Deliver full-stack websites with PHP, Laravel, WordPress, and Shopify.',
         'Set up domains, hosting, and CMS configurations for diverse business needs.',
         'Create dynamic frontends with JavaScript, Tailwind, and modern component patterns.',
-      ],
-    },
-    {
-      company: 'Independent Projects',
-      role: 'Full-Stack Developer',
-      period: '2019 — Present',
-      bullets: [
-        'Ship client sites including nonprofit and e-commerce properties.',
-        'Maintain responsive interfaces and accessible, performance-focused markup.',
       ],
     },
   ],
@@ -89,7 +80,7 @@ export const resume = {
       description:
         'Full PHP website for a faith community organization with multilingual pages and custom layouts.',
       url: 'https://cfcmass.org',
-      tags: ['PHP', 'Web', 'Client'],
+      tags: ['PHP', 'HTML', 'SQL', 'JS'],
     },
     {
       name: 'Email Optimizer VS Code Extension',
@@ -107,7 +98,7 @@ export const resume = {
     },
   ],
   labels: {
-    downloadPdf: 'Download PDF',
+    downloadPdf: 'Download CV',
     about: 'About',
     experience: 'Experience',
     education: 'Education',

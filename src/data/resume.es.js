@@ -6,15 +6,15 @@ export const resume = {
   name: 'Simón Rodil',
   title: 'Desarrollador Web y Especialista en Email Marketing',
   typingRoles: [
+    'Desarrollador Full-Stack',
     'Desarrollador Web',
     'Desarrollador de Emails',
-    'Especialista React',
-    'Full-Stack',
+    'Entusiasta en React',
   ],
   summary:
     'Ingeniero en Informática apasionado por crear soluciones digitales innovadoras. Transformo retos complejos en experiencias fluidas y fáciles de usar en desarrollo web, email responsive, bases de datos y hosting. Multilingüe (español, inglés y francés) y habituado a trabajar con equipos internacionales.',
   contact: {
-    email: 'hello@simonrodil.org',
+    email: 'simon.rodil@icloud.com',
     location: 'Remoto · Con base en España',
     linkedin: 'https://linkedin.com/in/simonrodil',
     github: 'https://github.com/simonrodil',
@@ -30,40 +30,43 @@ export const resume = {
   ],
   stats: [
     { value: 5, suffix: '+', label: 'Años de experiencia' },
-    { value: 15, suffix: '+', label: 'Proyectos entregados' },
+    { value: 35, suffix: '+', label: 'Proyectos entregados' },
     { value: 3, suffix: '', label: 'Idiomas' },
-    { value: 8, suffix: '+', label: 'Plataformas de email' },
+    { value: 8, suffix: '+', label: 'Lenguajes de Programación' },
   ],
   skills: {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Liquid'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript', 'SSJS'],
     backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
-    email: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML'],
-    tools: ['Figma', 'Photoshop', 'Git', 'VS Code', 'jQuery'],
+    email: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce'],
+    tools: ['Figma', 'Photoshop', 'Git', 'Claude'],
   },
   languages: [
     { name: 'Español', level: 'Nativo' },
     { name: 'Inglés', level: 'Profesional' },
-    { name: 'Francés', level: 'Profesional' },
+    { name: 'Francés', level: 'Intermedio' },
   ],
   experience: [
     {
       company: 'CodeCrew',
-      role: 'Desarrollador de Email',
-      period: '2024 — Actualidad',
+      role: 'Desarrollador Frontend',
+      period: '2021 — Actualidad',
       bullets: [
+        'Desarrollo de Soluciones en Wordpress para personalizacion de Sitios web',
+        'Manejo de Plantillas en Shopify para personalizacion de tiendas en linea',
         'Creo plantillas de email responsive y compatibles con los principales clientes de correo.',
         'Desarrollo flujos automatizados y campañas optimizadas para entrega y engagement.',
-        'Colaboro con diseño y estrategia para entregar HTML listo para producción.',
+        'Colaboro con diseño y estrategia para entregar HTML con AMPScript listo para producción.',
       ],
     },
     {
       company: 'Freelance y clientes',
-      role: 'Desarrollador Web',
+      role: 'Desarrollador Web Full-Stack',
       period: '2020 — Actualidad',
       bullets: [
         'Entrego sitios full-stack con PHP, Laravel, WordPress y Shopify.',
         'Configuro dominios, hosting y CMS según las necesidades de cada negocio.',
         'Construyo frontends dinámicos con JavaScript, Tailwind y patrones modernos.',
+        'Manejo y Administración de base de datos en SQL'
       ],
     },
     {
@@ -80,7 +83,7 @@ export const resume = {
     {
       degree: 'Ingeniería en Informática',
       institution: 'Universidad de las Ciencias Informáticas',
-      year: 'Graduado',
+      year: '2021',
     },
   ],
   projects: [
@@ -107,7 +110,7 @@ export const resume = {
     },
   ],
   labels: {
-    downloadPdf: 'Descargar PDF',
+    downloadPdf: 'Descargar CV',
     about: 'Sobre mí',
     experience: 'Experiencia',
     education: 'Educación',
