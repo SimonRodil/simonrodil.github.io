@@ -35,7 +35,7 @@ export const resume = {
     { value: 8, suffix: '+', label: 'Lenguajes de Programación' },
   ],
   skills: {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript', 'SSJS'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.JS', 'Python', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript', 'SSJS'],
     backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
     email: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce'],
     tools: ['Figma', 'Photoshop', 'Git', 'Claude'],
