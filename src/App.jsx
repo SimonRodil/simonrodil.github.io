@@ -8,6 +8,7 @@ import { Hero } from './components/Hero'
 import { ProjectCard } from './components/ProjectCard'
 import { Section } from './components/Section'
 import { Sidebar } from './components/Sidebar'
+import SideRays from './components/SideRays'          // 👈 nuevo import
 import { LanguageProvider, useLanguage } from './context/LanguageContext'
 
 function MainContent() {
@@ -87,6 +88,21 @@ export default function App() {
     <LanguageProvider>
       <div className="relative min-h-screen overflow-x-hidden">
         {/* <BackgroundGlow /> */}
+        <div className="pointer-events-none fixed inset-0 z-0">
+          <SideRays
+            speed={1.2}
+            rayColor1="#4ade80"
+            rayColor2="#22d3ee"
+            intensity={1.8}
+            spread={1.8}
+            origin="top-right"
+            tilt={10}
+            saturation={1.2}
+            blend={0.6}
+            falloff={2.2}
+            opacity={0.35}
+          />
+        </div>
         <div className="relative z-10">
           <Header />
           <MainContent />
