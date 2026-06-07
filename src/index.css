@@ -14,47 +14,71 @@
 /* Mobile Background Radial START */
 .mobile-radial-bg {
   background:
-    radial-gradient(
-      circle at 88% 12%,
-      rgba(34, 211, 238, 0.16) 0%,
-      rgba(34, 211, 238, 0.09) 12%,
-      rgba(34, 211, 238, 0.04) 24%,
-      transparent 42%
-    ),
-    radial-gradient(
-      circle at 78% 18%,
-      rgba(74, 222, 128, 0.14) 0%,
-      rgba(74, 222, 128, 0.08) 16%,
-      rgba(74, 222, 128, 0.03) 30%,
+    linear-gradient(
+      128deg,
+      transparent 18%,
+      rgba(34, 211, 238, 0.00) 24%,
+      rgba(34, 211, 238, 0.10) 28%,
+      rgba(34, 211, 238, 0.18) 31%,
+      rgba(34, 211, 238, 0.08) 35%,
+      rgba(34, 211, 238, 0.00) 41%,
       transparent 48%
     ),
+    linear-gradient(
+      134deg,
+      transparent 12%,
+      rgba(74, 222, 128, 0.00) 20%,
+      rgba(74, 222, 128, 0.08) 25%,
+      rgba(74, 222, 128, 0.15) 29%,
+      rgba(74, 222, 128, 0.06) 34%,
+      rgba(74, 222, 128, 0.00) 40%,
+      transparent 50%
+    ),
+    linear-gradient(
+      120deg,
+      transparent 22%,
+      rgba(45, 212, 191, 0.00) 28%,
+      rgba(45, 212, 191, 0.07) 32%,
+      rgba(45, 212, 191, 0.12) 36%,
+      rgba(45, 212, 191, 0.04) 41%,
+      rgba(45, 212, 191, 0.00) 47%,
+      transparent 54%
+    ),
     radial-gradient(
-      ellipse at 72% 24%,
-      rgba(16, 185, 129, 0.10) 0%,
-      rgba(6, 95, 70, 0.08) 24%,
-      rgba(3, 18, 24, 0.22) 46%,
-      transparent 68%
+      circle at 96% 6%,
+      rgba(74, 222, 128, 0.10) 0%,
+      rgba(34, 211, 238, 0.06) 10%,
+      rgba(2, 6, 12, 0.00) 26%
     ),
     linear-gradient(
       180deg,
-      rgba(2, 6, 12, 0.94) 0%,
-      rgba(3, 8, 16, 0.96) 45%,
-      rgba(2, 6, 12, 0.985) 100%
+      rgba(2, 6, 12, 0.96) 0%,
+      rgba(3, 8, 16, 0.975) 42%,
+      rgba(2, 6, 12, 0.992) 100%
     );
-  opacity: 0.95;
-  transform: scale(1.08);
-  animation: mobileSideGlow 16s ease-in-out infinite alternate;
-  will-change: transform, filter;
+  opacity: 0.45;
+  background-repeat: no-repeat;
+  background-size: 175% 175%;
+  background-position: 100% 0%;
+  animation: mobileSideRaysLines 5s ease-in-out infinite alternate;
+  will-change: background-position, transform, filter;
 }
 
-@keyframes mobileSideGlow {
+@keyframes mobileSideRaysLines {
   0% {
-    transform: scale(1.06) translate3d(0, 0, 0);
-    filter: saturate(0.95) blur(0px);
+    background-position: 100% 0%;
+    transform: scale(1.02) translate3d(0, 0, 0);
+    filter: blur(0px) saturate(0.92);
+  }
+  50% {
+    background-position: 92% 6%;
+    transform: scale(1.08) translate3d(-8px, 10px, 0);
+    filter: blur(0.8px) saturate(1.08);
   }
   100% {
-    transform: scale(1.12) translate3d(-10px, 14px, 0);
-    filter: saturate(1.05) blur(2px);
+    background-position: 86% 10%;
+    transform: scale(1.12) translate3d(-14px, 18px, 0);
+    filter: blur(1.2px) saturate(1.14);
   }
 }
 /* Mobile Background Radial END */
