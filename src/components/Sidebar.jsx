@@ -23,23 +23,6 @@ export function Sidebar() {
     >
       <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6">
         <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-[var(--color-muted)]">
-          {labels.contact}
-        </h3>
-        <ul className="space-y-3 text-sm">
-          <li>
-            <a
-              href={`mailto:${contact.email}`}
-              className="text-[var(--color-text)] transition-colors hover:text-[var(--color-accent)]"
-            >
-              {contact.email}
-            </a>
-          </li>
-          <li className="text-[var(--color-muted)]">{contact.location}</li>
-        </ul>
-      </div>
-
-      <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6">
-        <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-[var(--color-muted)]">
           {labels.skills}
         </h3>
         <SkillPills title="Frontend" items={skills.frontend} />
@@ -69,6 +52,18 @@ export function Sidebar() {
         <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-[var(--color-muted)]">
           {labels.connect}
         </h3>
+        <ul className="space-y-3 text-sm">
+          <li>
+            <a
+              href={`mailto:${contact.email}`}
+              className="text-[var(--color-text)] transition-colors hover:text-[var(--color-accent)]"
+            >
+              {contact.email}
+            </a>
+          </li>
+          <li className="text-[var(--color-muted)]">{contact.location}</li>
+        </ul>
+        <hr className="my-3 border-[var(--color-border)]" />
         <ul className="space-y-2">
           {socials.map((social) => (
             <li key={social.key}>
