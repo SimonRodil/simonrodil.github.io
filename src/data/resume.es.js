@@ -84,6 +84,7 @@ export const resume = {
       description:
         'Sitio PHP para una organización comunitaria con páginas multilingües y diseño a medida.',
       url: 'https://cfcmass.org',
+      image: 'projects/cfcmass.png',
       tags: ['PHP', 'Web', 'Cliente'],
     },
     {
@@ -91,6 +92,7 @@ export const resume = {
       description:
         'Extensión que ayuda a optimizar markup de email HTML directamente en el editor.',
       url: 'https://marketplace.visualstudio.com/search?term=email%20optimizer%20simon',
+      image: 'https://placehold.co/600x400/111111/22d3ee?text=Email+Optimizer',
       tags: ['TypeScript', 'VS Code', 'Email'],
     },
     {
@@ -98,6 +100,7 @@ export const resume = {
       description:
         'Portfolio personal animado con Tailwind, jQuery y diseño responsive.',
       url: 'https://simonrodil.github.io/Simon-Rodil-Portfolio-v3/',
+      image: 'https://placehold.co/600x400/111111/22d3ee?text=Portfolio+v3',
       tags: ['HTML', 'CSS', 'JavaScript'],
     },
   ],

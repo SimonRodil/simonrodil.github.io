@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { useTypingEffect } from '../hooks/useTypingEffect'
@@ -27,6 +27,17 @@ export function Hero() {
   })
   const imageY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : 80])
   const profileSrc = `${import.meta.env.BASE_URL}avatar_v2.jpg`
+
+  const [avatarAction, setAvatarAction] = useState('idle')
+
+  const handleAvatarClick = useCallback(() => {
+    if (avatarAction !== 'idle') return
+    setAvatarAction('pop')
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+      setAvatarAction('idle')
+    }, 700)
+  }, [avatarAction])
 
   return (
     <section
@@ -80,12 +91,59 @@ export function Hero() {
         </div>
 
         <motion.div variants={item} className="flex justify-center md:justify-end">
-          <motion.div style={{ y: imageY }} className="relative">
-            <div className="absolute -inset-3 rounded-full bg-[var(--color-accent)]/10 blur-2xl" />
-            <img
+          <motion.div
+            style={{ y: imageY }}
+            className="relative cursor-pointer"
+            role="button"
+            tabIndex={0}
+            onClick={handleAvatarClick}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                handleAvatarClick()
+              }
+            }}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
+          >
+            <motion.div
+              className="absolute -inset-4 rounded-full"
+              style={{ background: 'var(--color-accent)', filter: 'blur(40px)' }}
+              animate={
+                avatarAction === 'pop'
+                  ? { scale: [1, 1.6, 1], opacity: [0.08, 0.22, 0.06] }
+                  : { scale: 1, opacity: 0.08 }
+              }
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            />
+
+            <motion.div
+              className="absolute -inset-4 rounded-full border border-[var(--color-accent)]/30"
+              animate={
+                avatarAction === 'pop'
+                  ? { scale: [1, 2.2], opacity: [0.3, 0] }
+                  : { scale: 1, opacity: 0 }
+              }
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            />
+
+            <motion.img
               src={profileSrc}
               alt={data.name}
               className="relative h-56 w-56 rounded-full border-2 border-[var(--color-border)] object-cover md:h-72 md:w-72"
+              animate={
+                avatarAction === 'pop'
+                  ? {
+                      scale: [1, 1.08, 1],
+                      borderColor: [
+                        'var(--color-border)',
+                        'var(--color-accent)',
+                        'var(--color-border)',
+                      ],
+                    }
+                  : {}
+              }
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             />
           </motion.div>
         </motion.div>

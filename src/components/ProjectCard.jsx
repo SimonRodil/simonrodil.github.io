@@ -6,10 +6,14 @@ export function ProjectCard({ project, index }) {
   const { data } = useLanguage()
   const [open, setOpen] = useState(false)
 
+  const imgSrc = project.image?.startsWith('http')
+    ? project.image
+    : `${import.meta.env.BASE_URL}${project.image}`
+
   return (
     <>
       <motion.article
-        className="cursor-pointer rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 transition-colors hover:border-[var(--color-accent-dim)]"
+        className="group cursor-pointer overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] transition-colors hover:border-[var(--color-accent-dim)]"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -25,6 +29,16 @@ export function ProjectCard({ project, index }) {
         role="button"
         tabIndex={0}
       >
+        {project.image && (
+          <div className="overflow-hidden">
+            <img
+              src={imgSrc}
+              alt={project.name}
+              className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        )}
+        <div className="p-6">
         <h3 className="text-lg font-semibold">{project.name}</h3>
         <p className="mt-2 text-sm text-[var(--color-muted)] line-clamp-3">
           {project.description}
@@ -40,6 +54,7 @@ export function ProjectCard({ project, index }) {
           ))}
         </div>
         <p className="mt-4 text-sm text-[var(--color-accent)]">{data.labels.viewProject} →</p>
+        </div>
       </motion.article>
 
       <AnimatePresence>
@@ -52,13 +67,21 @@ export function ProjectCard({ project, index }) {
             onClick={() => setOpen(false)}
           >
             <motion.div
-              className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-8"
+              className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]"
               initial={{ opacity: 0, y: 40, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 24, scale: 0.96 }}
               transition={{ type: 'spring', stiffness: 300, damping: 28 }}
               onClick={(event) => event.stopPropagation()}
             >
+              {project.image && (
+                <img
+                  src={imgSrc}
+                  alt={project.name}
+                  className="w-full rounded-t-xl object-cover"
+                />
+              )}
+              <div className="p-8">
               <h3 className="text-2xl font-semibold">{project.name}</h3>
               <p className="mt-4 text-[var(--color-muted)]">{project.description}</p>
               <div className="mt-6 flex flex-wrap gap-3">
@@ -78,6 +101,7 @@ export function ProjectCard({ project, index }) {
                   {data.labels.close}
                 </button>
               </div>
+            </div>
             </motion.div>
           </motion.div>
         )}
