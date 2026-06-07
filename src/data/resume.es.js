@@ -3,8 +3,8 @@ export const resume = {
     locale: 'es',
     pdfPath: 'resume-es.pdf',
   },
-  name: 'Simón Rodil',
-  title: 'Desarrollador Web y Especialista en Email Marketing',
+  name: 'Simon Rodil',
+  title: 'Desarrollador Web y Especialista en Email Development',
   typingRoles: [
     'Desarrollador Full-Stack',
     'Desarrollador Web',
