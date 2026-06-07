@@ -1,0 +1,6 @@
+<svg viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="24" cy="26" rx="12" ry="14" opacity="0.9"/>
+  <path d="M14 20h20v5H14z" fill="#555" opacity="0.8"/>
+  <path d="M18 27h12v2H18z" fill="#555" opacity="0.8"/>
+  <circle cx="24" cy="14" r="4" fill="#555" opacity="0.8"/>
+</svg>

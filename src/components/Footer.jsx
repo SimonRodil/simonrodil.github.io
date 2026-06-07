@@ -193,7 +193,7 @@ export function Footer() {
         </motion.h2>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {cards.map((card, i) => (
+          {cards.map((card) => (
             <TiltCard key={card.brand} {...card} />
           ))}
         </div>

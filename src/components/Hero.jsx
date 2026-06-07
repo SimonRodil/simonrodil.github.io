@@ -1,8 +1,10 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useCallback, useRef, useState } from 'react'
+import { AnimatePresence, motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { useTypingEffect } from '../hooks/useTypingEffect'
+import { BackgroundSelector, useUniverse } from './HeroBackground'
+import { YouTubeBackground } from './YouTubeBackground'
 
 const container = {
   hidden: {},
@@ -20,15 +22,32 @@ export function Hero() {
   const { data } = useLanguage()
   const reduced = useReducedMotion()
   const typedRole = useTypingEffect(data.typingRoles)
-  const ref = useRef(null)
+  const sectionRef = useRef(null)
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: sectionRef,
     offset: ['start start', 'end start'],
   })
   const imageY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : 80])
   const profileSrc = `${import.meta.env.BASE_URL}avatar_v2.jpg`
-
   const [avatarAction, setAvatarAction] = useState('idle')
+
+  const [isDesktop, setIsDesktop] = useState(
+    typeof window !== 'undefined' ? window.innerWidth >= 1024 : true,
+  )
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const handler = (e) => setIsDesktop(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
+  const { activeUniverse, setHeroVisible } = useUniverse()
+  const inView = useInView(sectionRef, { margin: '-40% 0px' })
+
+  useEffect(() => {
+    setHeroVisible(inView)
+  }, [inView, setHeroVisible])
 
   const handleAvatarClick = useCallback(() => {
     if (avatarAction !== 'idle') return
@@ -42,11 +61,30 @@ export function Hero() {
   return (
     <section
       id="home"
-      ref={ref}
-      className="relative flex min-h-screen scroll-mt-0 items-center pt-24 pb-16"
+      ref={sectionRef}
+      className="relative flex min-h-screen scroll-mt-0 items-center overflow-hidden pt-24 pb-16"
     >
+      <AnimatePresence mode="wait">
+        {isDesktop && activeUniverse && (
+          <motion.div key={activeUniverse} className="absolute inset-0 z-0">
+            <YouTubeBackground activeUniverse={activeUniverse} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {activeUniverse && (
+        <div
+          className="pointer-events-none absolute bottom-0 left-0 right-0 z-10"
+          style={{
+            height: '32rem',
+            background:
+              'linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 20%, rgba(10,10,10,0.85) 40%, rgba(10,10,10,0.5) 60%, rgba(10,10,10,0.2) 80%, transparent 100%)',
+          }}
+        />
+      )}
+
       <motion.div
-        className="mx-auto grid w-full max-w-6xl gap-12 px-4 md:grid-cols-2 md:items-center md:px-6"
+        className="relative z-10 mx-auto grid w-full max-w-6xl gap-12 px-4 md:grid-cols-2 md:items-center md:px-6"
         variants={container}
         initial={reduced ? false : 'hidden'}
         animate="visible"
@@ -73,7 +111,7 @@ export function Hero() {
           <motion.p variants={item} className="mt-4 max-w-xl text-[var(--color-muted)]">
             {data.title}
           </motion.p>
-          <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+          <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#contact"
               className="rounded-lg bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-[var(--color-bg)] transition-opacity hover:opacity-90"
@@ -87,6 +125,7 @@ export function Hero() {
             >
               {data.labels.downloadPdf}
             </a>
+            {isDesktop && <BackgroundSelector />}
           </motion.div>
         </div>
 

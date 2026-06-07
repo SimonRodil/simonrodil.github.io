@@ -5,11 +5,13 @@ export function LanguageToggle() {
   const { lang, toggleLang } = useLanguage()
 
   return (
-    <button
+    <motion.button
       type="button"
       onClick={toggleLang}
-      className="flex items-center gap-1.5 text-xs font-medium text-[var(--color-muted)] hover:text-[var(--color-text)] transition-colors"
+      className="flex cursor-pointer items-center gap-1.5 text-xs font-medium text-[var(--color-muted)] transition-colors hover:text-[var(--color-text)]"
       aria-label={lang === 'en' ? 'Cambiar a español' : 'Switch to English'}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
     >
       <svg
         width="14" height="14" viewBox="0 0 24 24"
@@ -29,6 +31,6 @@ export function LanguageToggle() {
       >
         {lang === 'en' ? 'ES' : 'EN'}
       </motion.span>
-    </button>
+    </motion.button>
   )
 }

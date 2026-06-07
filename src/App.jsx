@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-/* import { BackgroundGlow } from './components/BackgroundGlow' */
 import { AnimatedCounter } from './components/AnimatedCounter'
 import { ExperienceTimeline } from './components/ExperienceTimeline'
 import { Footer } from './components/Footer'
@@ -11,6 +10,37 @@ import { Section } from './components/Section'
 import { Sidebar } from './components/Sidebar'
 import SideRays from './components/SideRays'
 import { LanguageProvider, useLanguage } from './context/LanguageContext'
+import { UniverseProvider, useUniverse } from './components/HeroBackground'
+
+function BackgroundLayer() {
+  const { activeUniverse } = useUniverse()
+  const isUniverseActive = !!activeUniverse
+
+  return (
+    <>
+      <motion.div
+        className="pointer-events-none fixed inset-0 z-0 hidden md:block"
+        animate={{ opacity: isUniverseActive ? 0 : 1 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <SideRays
+          speed={1.2}
+          rayColor1="#4ade80"
+          rayColor2="#2a6265"
+          intensity={2.2}
+          spread={10.8}
+          origin="top-right"
+          tilt={10}
+          saturation={1.2}
+          blend={0.6}
+          falloff={2.2}
+          opacity={0.45}
+        />
+      </motion.div>
+      <div className="mobile-radial-bg pointer-events-none fixed inset-0 z-0 md:hidden" />
+    </>
+  )
+}
 
 function MainContent() {
   const { data, lang } = useLanguage()
@@ -106,31 +136,17 @@ export default function App() {
   }, [])
 
   return (
-    <LanguageProvider>
-      <div className="relative min-h-screen overflow-x-hidden">
-        <div className="pointer-events-none fixed inset-0 z-0 hidden md:block">
-          <SideRays
-            speed={1.2}
-            rayColor1="#4ade80"
-            rayColor2="#2a6265"
-            intensity={2.2}
-            spread={10.8}
-            origin="top-right"
-            tilt={10}
-            saturation={1.2}
-            blend={0.6}
-            falloff={2.2}
-            opacity={0.45}
-          />
-        </div>
+    <UniverseProvider>
+      <LanguageProvider>
+        <div className="relative min-h-screen overflow-x-hidden">
+          <BackgroundLayer />
 
-        <div className="mobile-radial-bg pointer-events-none fixed inset-0 z-0 md:hidden" />
-
-        <div className="relative z-10">
-          <Header />
-          <MainContent />
+          <div className="relative z-10">
+            <Header />
+            <MainContent />
+          </div>
         </div>
-      </div>
-    </LanguageProvider>
+      </LanguageProvider>
+    </UniverseProvider>
   )
 }
