@@ -108,9 +108,9 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="relative min-h-screen overflow-x-hidden">
-        <div className="pointer-events-none fixed inset-0 z-0">
+        <div className="pointer-events-none fixed inset-0 z-0 hidden md:block">
           <SideRays
-            speed={isMobile ? 0 : 1.2}
+            speed={1.2}
             rayColor1="#4ade80"
             rayColor2="#22d3ee"
             intensity={1.8}
@@ -120,9 +120,11 @@ export default function App() {
             saturation={1.2}
             blend={0.6}
             falloff={2.2}
-            opacity={isMobile ? 0.25 : 0.35}
+            opacity={0.55}
           />
         </div>
+
+        <div className="mobile-radial-bg pointer-events-none fixed inset-0 z-0 md:hidden" />
 
         <div className="relative z-10">
           <Header />

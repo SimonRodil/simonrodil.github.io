@@ -11,6 +11,54 @@
   --font-sans: 'Inter', system-ui, sans-serif;
 }
 
+/* Mobile Background Radial START */
+.mobile-radial-bg {
+  background:
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(34, 211, 238, 0.16) 0%,
+      rgba(34, 211, 238, 0.09) 12%,
+      rgba(34, 211, 238, 0.04) 24%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(74, 222, 128, 0.14) 0%,
+      rgba(74, 222, 128, 0.08) 16%,
+      rgba(74, 222, 128, 0.03) 30%,
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 72% 24%,
+      rgba(16, 185, 129, 0.10) 0%,
+      rgba(6, 95, 70, 0.08) 24%,
+      rgba(3, 18, 24, 0.22) 46%,
+      transparent 68%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 6, 12, 0.94) 0%,
+      rgba(3, 8, 16, 0.96) 45%,
+      rgba(2, 6, 12, 0.985) 100%
+    );
+  opacity: 0.95;
+  transform: scale(1.08);
+  animation: mobileSideGlow 16s ease-in-out infinite alternate;
+  will-change: transform, filter;
+}
+
+@keyframes mobileSideGlow {
+  0% {
+    transform: scale(1.06) translate3d(0, 0, 0);
+    filter: saturate(0.95) blur(0px);
+  }
+  100% {
+    transform: scale(1.12) translate3d(-10px, 14px, 0);
+    filter: saturate(1.05) blur(2px);
+  }
+}
+/* Mobile Background Radial END */
+
 html {
   scroll-behavior: smooth;
 }
