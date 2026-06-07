@@ -112,15 +112,15 @@ export default function App() {
           <SideRays
             speed={1.2}
             rayColor1="#4ade80"
-            rayColor2="#22d3ee"
-            intensity={1.8}
-            spread={1.8}
+            rayColor2="#2a6265"
+            intensity={2.2}
+            spread={10.8}
             origin="top-right"
             tilt={10}
             saturation={1.2}
             blend={0.6}
             falloff={2.2}
-            opacity={0.55}
+            opacity={0.45}
           />
         </div>
 

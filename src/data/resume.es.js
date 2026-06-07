@@ -20,6 +20,7 @@ export const resume = {
     github: 'https://github.com/simonrodil',
     instagram: 'https://instagram.com/simonrodil',
     devto: 'https://dev.to/simonrodil',
+    whatsapp: '+34624362700',
   },
   nav: [
     { id: 'about', label: 'Sobre mí' },
@@ -119,5 +120,8 @@ export const resume = {
     hello: 'Hola,',
     im: 'soy',
     footer: 'Todos los derechos reservados.',
+    letsConnect: 'Conectemos',
+    letsTalk: 'Hablemos',
+    emailMe: 'Envíame un email',
   },
 }
