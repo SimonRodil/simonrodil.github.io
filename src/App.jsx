@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 /* import { BackgroundGlow } from './components/BackgroundGlow' */
 import { AnimatedCounter } from './components/AnimatedCounter'
@@ -8,7 +9,7 @@ import { Hero } from './components/Hero'
 import { ProjectCard } from './components/ProjectCard'
 import { Section } from './components/Section'
 import { Sidebar } from './components/Sidebar'
-import SideRays from './components/SideRays'          // 👈 nuevo import
+import SideRays from './components/SideRays'
 import { LanguageProvider, useLanguage } from './context/LanguageContext'
 
 function MainContent() {
@@ -84,13 +85,32 @@ function MainContent() {
 }
 
 export default function App() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 767px)')
+
+    const updateIsMobile = (e) => {
+      setIsMobile(e.matches)
+    }
+
+    setIsMobile(mediaQuery.matches)
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', updateIsMobile)
+      return () => mediaQuery.removeEventListener('change', updateIsMobile)
+    }
+
+    mediaQuery.addListener(updateIsMobile)
+    return () => mediaQuery.removeListener(updateIsMobile)
+  }, [])
+
   return (
     <LanguageProvider>
       <div className="relative min-h-screen overflow-x-hidden">
-        {/* <BackgroundGlow /> */}
         <div className="pointer-events-none fixed inset-0 z-0">
           <SideRays
-            speed={1.2}
+            speed={isMobile ? 0 : 1.2}
             rayColor1="#4ade80"
             rayColor2="#22d3ee"
             intensity={1.8}
@@ -100,9 +120,10 @@ export default function App() {
             saturation={1.2}
             blend={0.6}
             falloff={2.2}
-            opacity={0.35}
+            opacity={isMobile ? 0.25 : 0.35}
           />
         </div>
+
         <div className="relative z-10">
           <Header />
           <MainContent />
