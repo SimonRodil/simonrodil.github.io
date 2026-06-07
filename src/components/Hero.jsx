@@ -26,7 +26,7 @@ export function Hero() {
     offset: ['start start', 'end start'],
   })
   const imageY = useTransform(scrollYProgress, [0, 1], [0, reduced ? 0 : 80])
-  const profileSrc = `${import.meta.env.BASE_URL}profile.jpg`
+  const profileSrc = `${import.meta.env.BASE_URL}avatar_v2.jpg`
 
   return (
     <section
