@@ -54,7 +54,7 @@ export function BackgroundSelector() {
       <motion.button
         type="button"
         onClick={handlePlayClick}
-        className="flex items-center justify-center rounded-lg border border-[var(--color-border)] bg-transparent px-4 py-2.5 text-sm font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"
+        className="flex cursor-pointer items-center justify-center rounded-lg border border-[var(--color-border)] bg-transparent px-4 py-2.5 text-sm font-medium text-[var(--color-text)] transition-colors hover:border-[var(--color-accent)]"
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
         aria-label={menuOpen ? 'Close menu' : 'Select universe background'}

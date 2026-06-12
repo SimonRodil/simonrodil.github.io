@@ -60,7 +60,7 @@ export function ProjectCard({ project, index }) {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex cursor-pointer items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -94,9 +94,9 @@ export function ProjectCard({ project, index }) {
                   {data.labels.viewProject}
                 </a>
                 <button
-                  type="button"
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg border border-[var(--color-border)] px-4 py-2 text-sm"
+              type="button"
+              onClick={() => setOpen(false)}
+              className="cursor-pointer rounded-lg border border-[var(--color-border)] px-4 py-2 text-sm"
                 >
                   {data.labels.close}
                 </button>
