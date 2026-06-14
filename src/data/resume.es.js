@@ -83,26 +83,34 @@ export const resume = {
     {
       name: 'Sitio CFC Massachusetts',
       description:
-        'Sitio PHP para una organización comunitaria con páginas multilingües y diseño a medida.',
+      'CFCMass es un sitio web para una organización comunitaria, diseñado con un estilo visual personalizado y soporte para contenido multilingüe. Incluye secciones informativas sobre la organización, actividades, métodos de contacto y un panel para administrar el contenido de forma sencilla. El sitio incorpora herramientas de análisis que ayudan a comprender cómo navegan los usuarios y qué tipo de información buscan, lo que permite ajustar la comunicación y mejorar la conexión con la comunidad.',
       url: 'https://cfcmass.org',
       image: 'projects/cfcmass.png',
-      tags: ['PHP', 'Web', 'Cliente'],
+      tags: ['PHP Legacy', 'HTML', 'SQL', 'CSS', 'JS', 'jQuery', 'Bootstrap', 'Hubspot ESP'],
     },
     {
-      name: 'Extensión Email Optimizer para VS Code',
+      name: 'Bululu Outlet',
       description:
-        'Extensión que ayuda a optimizar markup de email HTML directamente en el editor.',
+        'Bululu es una aplicación web de marketplace desarrollada completamente a medida en Laravel, diseñada para ofrecer una experiencia fluida tanto a clientes finales como al equipo administrativo. El sistema incluye módulos avanzados para la gestión de productos, categorías, clientes, promociones, configuración de ventas, inventario y administración general del catálogo. El panel administrativo permite manipular cada módulo con permisos diferenciados y una arquitectura pensada para escalar. La plataforma se integró con un CRM externo para automatizar campañas, segmentar usuarios y mejorar el engagement mediante workflows personalizados. También se implementó Facebook Pixel y Google Analytics / Google Tag Manager para medir conversiones, optimizar campañas y analizar el comportamiento de los usuarios dentro del marketplace. Tecnologías: Laravel, MySQL, Blade, CRM, Facebook Pixel, Google Analytics.',
       url: 'https://marketplace.visualstudio.com/search?term=email%20optimizer%20simon',
-      image: 'https://placehold.co/600x400/111111/22d3ee?text=Email+Optimizer',
-      tags: ['TypeScript', 'VS Code', 'Email'],
+      image: 'projects/bululu.png',
+      tags: ['PHP', 'Laravel', 'Livewire', 'HTML', 'CSS', 'JS', 'jQuery', 'Klaviyo ESP'],
     },
     {
-      name: 'Portfolio v3',
+      name: 'El Rey Jesus PF',
       description:
-        'Portfolio personal animado con Tailwind, jQuery y diseño responsive.',
-      url: 'https://simonrodil.github.io/Simon-Rodil-Portfolio-v3/',
-      image: 'https://placehold.co/600x400/111111/22d3ee?text=Portfolio+v3',
-      tags: ['HTML', 'CSS', 'JavaScript'],
+      'ERJPF es un sitio institucional desarrollado con Laravel + Vite, enfocado en presentar información clara sobre la organización religiosa, sus actividades y sus métodos de contacto. Incluye un panel administrativo para gestionar eventos, registrar miembros y mantener el contenido actualizado. El sitio está optimizado para carga rápida y estructura modular, y utiliza herramientas de medición que permiten entender cómo interactúan los visitantes con las distintas secciones, facilitando mejoras continuas en comunicación y alcance.',
+      url: 'https://github.com/SimonRodil/elreyjesuspf',
+      image: 'projects/erjpf1.png',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Blade', 'SQL', 'Mailchimp ESP'],
+    },
+    {
+      name: 'Bodegas & Proyectos',
+      description:
+      'Bodegas & Espacios es una aplicación web para una agencia inmobiliaria desarrollada con Laravel + Vite, pensada para ofrecer velocidad, seguridad y una gestión eficiente de propiedades, ciudades, miembros del equipo, configuraciones internas y contenido optimizado para buscadores. La plataforma se integra con Iterable para automatizar flujos de comunicación y mantener a los clientes activos según su comportamiento dentro del sitio. Además, incorpora sistemas de análisis que permiten evaluar el rendimiento de las campañas y entender mejor el recorrido de los usuarios, apoyando la estrategia comercial de la agencia.',
+      url: 'https://github.com/SimonRodil/BodegasyProyectos/tree/ReworkLaravel',
+      image: 'https://placehold.co/600x400/111111/22d3ee?text=Bodegas & Proyectos',
+      tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'SQL', 'Vite', 'Iterable ESP'],
     },
   ],
   labels: {
