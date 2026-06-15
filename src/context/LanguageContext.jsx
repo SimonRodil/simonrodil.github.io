@@ -8,7 +8,9 @@ const STORAGE_KEY = 'simon-rodil-cv-lang'
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(() => {
     if (typeof window === 'undefined') return 'en'
-    return localStorage.getItem(STORAGE_KEY) === 'es' ? 'es' : 'en'
+    const saved = localStorage.getItem(STORAGE_KEY)
+    if (saved === 'en' || saved === 'es') return saved
+    return navigator.language.startsWith('es') ? 'es' : 'en'
   })
 
   useEffect(() => {

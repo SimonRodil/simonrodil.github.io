@@ -27,7 +27,7 @@ export function Sidebar() {
         </h3>
         <SkillPills title="Frontend" items={skills.frontend} />
         <SkillPills title="Backend" items={skills.backend} />
-        <SkillPills title="Email" items={skills.email} />
+        <SkillPills title="CRM" items={skills.crm} />
         <SkillPills title="Tools" items={skills.tools} />
       </div>
 

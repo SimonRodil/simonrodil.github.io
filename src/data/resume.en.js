@@ -4,15 +4,15 @@ export const resume = {
     pdfPath: 'resume-en.pdf',
   },
   name: 'Simon Rodil',
-  title: 'Web Developer & Email Marketing Specialist',
+  title: 'Web Developer & CRM Technician',
   typingRoles: [
     'Full-Stack Developer',
     'Web Developer',
-    'Email Developer',
+    'CRM Developer/Technician',
     'React Learner',
   ],
   summary:
-    'Informatics Engineer passionate about crafting innovative digital solutions. I turn complex challenges into seamless, user-friendly experiences across web development, responsive email, databases, and hosting. Multilingual (Spanish, English, French) and comfortable collaborating with international teams.',
+    'Informatics Engineer passionate about crafting innovative digital solutions. I turn complex challenges into seamless, user-friendly experiences across web development, crm developer, databases, and hosting. Multilingual (Spanish, English, French) and comfortable collaborating with international teams.',
   contact: {
     email: 'simon.rodil@icloud.com',
     location: 'Available remotely · Based in Spain',
@@ -38,7 +38,7 @@ export const resume = {
   skills: {
     frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.JS', 'Python', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript', 'SSJS'],
     backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
-    email: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce'],
+    crm: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce'],
     tools: ['Figma', 'Photoshop', 'Git', 'Claude'],
   },
   languages: [
@@ -54,7 +54,7 @@ export const resume = {
       bullets: [
         'WordPress Solutions Development for Website Customization.',
         'Managing Shopify templates for online store customization.',
-        'Development of responsive email templates compatible with major email clients.',
+        'Development of responsive email templates compatible with major CRM platforms.',
         'Using APIs for campaigns and workflows/journeys in CRMs like Iterable and Salesforce.',
         'I collaborate on design and strategy to deliver HTML with AMPScript ready for customization.',
       ],
@@ -75,8 +75,8 @@ export const resume = {
   education: [
     {
       degree: 'B.S. Informatics Engineering',
-      institution: 'Universidad de las Ciencias Informáticas',
-      year: 'Graduate',
+      institution: 'Universidad Politecnica Territorial Alonso Gamero',
+      year: '2021',
     },
   ],
   projects: [
@@ -85,7 +85,7 @@ export const resume = {
       description:
         'CFCMass is a website for a community organization, designed with a custom visual style and multilingual content support. It includes informational sections about the organization, activities, contact methods, and a panel to easily manage content. The site incorporates analytics tools that help understand how users navigate and what type of information they seek, allowing for communication adjustments and improving community connection.',
       url: 'https://cfcmass.org',
-      year: '2024',
+      year: '2021',
       images: ['projects/cfcmass.png'],
       tags: ['PHP Legacy', 'HTML', 'SQL', 'CSS', 'JS', 'jQuery', 'Bootstrap', 'Hubspot ESP'],
     },
@@ -94,7 +94,7 @@ export const resume = {
       description:
         'Bululu is a fully custom marketplace web application built with Laravel, designed to offer a smooth experience for both end customers and the administrative team. The system includes advanced modules for managing products, categories, customers, promotions, sales configuration, inventory, and overall catalog administration. The admin panel allows manipulating each module with differentiated permissions and a scalable architecture. The platform was integrated with an external CRM to automate campaigns, segment users, and improve engagement through personalized workflows. Facebook Pixel and Google Analytics / Google Tag Manager were also implemented to measure conversions, optimize campaigns, and analyze user behavior within the marketplace.',
       url: 'https://marketplace.visualstudio.com/search?term=email%20optimizer%20simon',
-      year: '2024',
+      year: '2021',
       images: ['projects/bululu.png'],
       tags: ['PHP', 'Laravel', 'Livewire', 'HTML', 'CSS', 'JS', 'jQuery', 'Klaviyo ESP'],
     },
@@ -103,7 +103,7 @@ export const resume = {
       description:
         'ERJPF is an institutional website built with Laravel + Vite, focused on presenting clear information about the religious organization, its activities, and contact methods. It includes an admin panel to manage events, register members, and keep content up to date. The site is optimized for fast loading with a modular structure, and uses analytics tools that help understand how visitors interact with different sections, facilitating continuous improvements in communication and outreach.',
       url: 'https://github.com/SimonRodil/elreyjesuspf',
-      year: '2024',
+      year: '2021',
       images: ['projects/erjpf1.png'],
       tags: ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Blade', 'SQL', 'Mailchimp ESP'],
     },
