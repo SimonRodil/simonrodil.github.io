@@ -113,7 +113,7 @@ export const resume = {
         'Bodegas & Espacios is a web application for a real estate agency built with Laravel + Vite, designed to offer speed, security, and efficient management of properties, cities, team members, internal settings, and SEO-optimized content. The platform integrates with Iterable to automate communication flows and keep customers engaged based on their behavior within the site. It also incorporates analytics systems to evaluate campaign performance and better understand user journeys, supporting the agency business strategy.',
       url: 'https://github.com/SimonRodil/BodegasyProyectos/tree/ReworkLaravel',
       year: '2025',
-      images: ['https://placehold.co/600x400/111111/22d3ee?text=Bodegas & Proyectos'],
+      images: ['projects/bodegas1.png'],
       tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'SQL', 'Vite', 'Iterable ESP'],
     },
   ],
