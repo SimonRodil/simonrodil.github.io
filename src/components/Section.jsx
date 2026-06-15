@@ -12,7 +12,7 @@ export function Section({ id, title, children, className = '' }) {
   return (
     <motion.section
       id={id}
-      className={`scroll-mt-28 py-16 md:py-20 ${className}`}
+      className={`scroll-mt-28 py-16 md:py-10 ${className}`}
       initial={reduced ? false : 'hidden'}
       whileInView="visible"
       viewport={{ once: true, margin: '-80px' }}

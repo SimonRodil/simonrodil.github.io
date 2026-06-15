@@ -83,26 +83,38 @@ export const resume = {
     {
       name: 'CFC Massachusetts Website',
       description:
-        'Full PHP website for a faith community organization with multilingual pages and custom layouts.',
+        'CFCMass is a website for a community organization, designed with a custom visual style and multilingual content support. It includes informational sections about the organization, activities, contact methods, and a panel to easily manage content. The site incorporates analytics tools that help understand how users navigate and what type of information they seek, allowing for communication adjustments and improving community connection.',
       url: 'https://cfcmass.org',
-      image: 'projects/cfcmass.png',
-      tags: ['PHP', 'HTML', 'SQL', 'JS'],
+      year: '2024',
+      images: ['projects/cfcmass.png'],
+      tags: ['PHP Legacy', 'HTML', 'SQL', 'CSS', 'JS', 'jQuery', 'Bootstrap', 'Hubspot ESP'],
     },
     {
-      name: 'Email Optimizer VS Code Extension',
+      name: 'Bululu Outlet',
       description:
-        'Extension that helps developers optimize HTML email markup directly in the editor.',
+        'Bululu is a fully custom marketplace web application built with Laravel, designed to offer a smooth experience for both end customers and the administrative team. The system includes advanced modules for managing products, categories, customers, promotions, sales configuration, inventory, and overall catalog administration. The admin panel allows manipulating each module with differentiated permissions and a scalable architecture. The platform was integrated with an external CRM to automate campaigns, segment users, and improve engagement through personalized workflows. Facebook Pixel and Google Analytics / Google Tag Manager were also implemented to measure conversions, optimize campaigns, and analyze user behavior within the marketplace.',
       url: 'https://marketplace.visualstudio.com/search?term=email%20optimizer%20simon',
-      image: 'https://placehold.co/600x400/111111/22d3ee?text=Email+Optimizer',
-      tags: ['TypeScript', 'VS Code', 'Email'],
+      year: '2024',
+      images: ['projects/bululu.png'],
+      tags: ['PHP', 'Laravel', 'Livewire', 'HTML', 'CSS', 'JS', 'jQuery', 'Klaviyo ESP'],
     },
     {
-      name: 'Portfolio v3',
+      name: 'El Rey Jesus PF',
       description:
-        'Animated personal portfolio with Tailwind, jQuery interactions, and responsive design.',
-      url: 'https://simonrodil.github.io/Simon-Rodil-Portfolio-v3/',
-      image: 'https://placehold.co/600x400/111111/22d3ee?text=Portfolio+v3',
-      tags: ['HTML', 'CSS', 'JavaScript'],
+        'ERJPF is an institutional website built with Laravel + Vite, focused on presenting clear information about the religious organization, its activities, and contact methods. It includes an admin panel to manage events, register members, and keep content up to date. The site is optimized for fast loading with a modular structure, and uses analytics tools that help understand how visitors interact with different sections, facilitating continuous improvements in communication and outreach.',
+      url: 'https://github.com/SimonRodil/elreyjesuspf',
+      year: '2024',
+      images: ['projects/erjpf1.png'],
+      tags: ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Blade', 'SQL', 'Mailchimp ESP'],
+    },
+    {
+      name: 'Bodegas & Proyectos',
+      description:
+        'Bodegas & Espacios is a web application for a real estate agency built with Laravel + Vite, designed to offer speed, security, and efficient management of properties, cities, team members, internal settings, and SEO-optimized content. The platform integrates with Iterable to automate communication flows and keep customers engaged based on their behavior within the site. It also incorporates analytics systems to evaluate campaign performance and better understand user journeys, supporting the agency business strategy.',
+      url: 'https://github.com/SimonRodil/BodegasyProyectos/tree/ReworkLaravel',
+      year: '2025',
+      images: ['https://placehold.co/600x400/111111/22d3ee?text=Bodegas & Proyectos'],
+      tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'SQL', 'Vite', 'Iterable ESP'],
     },
   ],
   labels: {
@@ -115,6 +127,7 @@ export const resume = {
     skills: 'Skills',
     languages: 'Languages',
     connect: 'Connect',
+    year: 'Year',
     viewProject: 'View project',
     close: 'Close',
     hello: 'Hello,',
