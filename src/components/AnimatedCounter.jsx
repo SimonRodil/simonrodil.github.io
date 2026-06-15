@@ -10,7 +10,7 @@ export function AnimatedCounter({ value, suffix = '', label }) {
   return (
     <motion.div
       ref={ref}
-      className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 text-center"
+      className="p-6 text-center"
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

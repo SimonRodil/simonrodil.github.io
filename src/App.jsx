@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AnimatedCounter } from './components/AnimatedCounter'
+import { BorderFlow } from './components/BorderFlow'
 import { ExperienceTimeline } from './components/ExperienceTimeline'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
@@ -54,7 +55,7 @@ function MainContent() {
         exit={{ opacity: 0, y: -8 }}
         transition={{ duration: 0.35 }}
       >
-        <Hero />
+        <Hero onContactClick={() => window.dispatchEvent(new CustomEvent('start-contact-highlight'))} />
 
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-16">
@@ -67,12 +68,13 @@ function MainContent() {
                 </p>
                 <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
                   {data.stats.map((stat) => (
-                    <AnimatedCounter
-                      key={stat.label}
-                      value={stat.value}
-                      suffix={stat.suffix}
-                      label={stat.label}
-                    />
+                    <BorderFlow key={stat.label}>
+                      <AnimatedCounter
+                        value={stat.value}
+                        suffix={stat.suffix}
+                        label={stat.label}
+                      />
+                    </BorderFlow>
                   ))}
                 </div>
               </Section>
@@ -82,19 +84,18 @@ function MainContent() {
               </Section>
 
               <Section id="education" title={data.labels.education}>
-                <ul className="space-y-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                   {data.education.map((item) => (
-                    <li
-                      key={item.degree}
-                      className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6"
-                    >
-                      <h3 className="font-semibold">{item.degree}</h3>
-                      <p className="mt-1 text-sm text-[var(--color-muted)]">
-                        {item.institution} · {item.year}
-                      </p>
-                    </li>
+                    <BorderFlow key={item.degree}>
+                      <div className="p-6">
+                        <h3 className="font-semibold">{item.degree}</h3>
+                        <p className="mt-1 text-sm text-[var(--color-muted)]">
+                          {item.institution} · {item.year}
+                        </p>
+                      </div>
+                    </BorderFlow>
                   ))}
-                </ul>
+                </div>
               </Section>
 
               <Section id="projects" title={data.labels.projects}>

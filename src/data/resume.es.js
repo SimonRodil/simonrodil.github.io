@@ -25,7 +25,7 @@ export const resume = {
   nav: [
     { id: 'about', label: 'Sobre mí' },
     { id: 'experience', label: 'Experiencia' },
-    { id: 'education', label: 'Educación' },
+    { id: 'education', label: 'Educación y Certificaciones' },
     { id: 'projects', label: 'Proyectos' },
     { id: 'contact', label: 'Contacto' },
   ],
@@ -104,7 +104,7 @@ export const resume = {
       'ERJPF es un sitio institucional desarrollado con Laravel + Vite, enfocado en presentar información clara sobre la organización religiosa, sus actividades y sus métodos de contacto. Incluye un panel administrativo para gestionar eventos, registrar miembros y mantener el contenido actualizado. El sitio está optimizado para carga rápida y estructura modular, y utiliza herramientas de medición que permiten entender cómo interactúan los visitantes con las distintas secciones, facilitando mejoras continuas en comunicación y alcance.',
       url: 'https://github.com/SimonRodil/elreyjesuspf',
       year: '2024',
-      images: ['projects/erjpf1.png'],
+      images: ['projects/erjpf1.png', 'projects/erjpf2.png'],
       tags: ['HTML', 'CSS', 'JavaScript', 'Laravel', 'Blade', 'SQL', 'Mailchimp ESP'],
     },
     {
@@ -119,9 +119,12 @@ export const resume = {
   ],
   labels: {
     downloadPdf: 'Descargar CV',
+    downloadModalTitle: '⚠️ Aviso',
+    downloadModalMessage: 'Como todo buen programador, puede que este currículum no tenga mis últimos registros, experiencias, proyectos y datos personales. Para más certeza dirígete al área de contacto y mándame un email, felizmente podría enviarte la última información. Si igualmente quieres ver el último CV alojado en este sitio web puedes hacerlo.',
+    contactMe: 'Contactar',
     about: 'Sobre mí',
     experience: 'Experiencia',
-    education: 'Educación',
+    education: 'Educación y Certificaciones',
     projects: 'Proyectos',
     contact: 'Contacto',
     skills: 'Habilidades',

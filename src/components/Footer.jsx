@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -8,11 +8,12 @@ const brands = {
   email: { hex: '#38bdf8', label: 'Email' },
 }
 
-function TiltCard({ brand, href, target, icon, title, description, cta }) {
+function TiltCard({ brand, href, target, icon, title, description, cta, highlighted }) {
   const cardRef = useRef(null)
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
   const [hover, setHover] = useState(false)
   const brandHex = brands[brand]?.hex ?? brands.email.hex
+  const active = hover || highlighted
 
   const handleMouseMove = (e) => {
     if (!cardRef.current) return
@@ -25,7 +26,7 @@ function TiltCard({ brand, href, target, icon, title, description, cta }) {
   const handleMouseEnter = () => setHover(true)
   const handleMouseLeave = () => {
     setHover(false)
-    setTilt({ x: 0, y: 0 })
+    if (!highlighted) setTilt({ x: 0, y: 0 })
   }
 
   return (
@@ -39,7 +40,7 @@ function TiltCard({ brand, href, target, icon, title, description, cta }) {
       onMouseLeave={handleMouseLeave}
       style={{
         transform: `perspective(600px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)`,
-        transition: hover
+        transition: active
           ? 'box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1)'
           : 'transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1)',
       }}
@@ -51,10 +52,10 @@ function TiltCard({ brand, href, target, icon, title, description, cta }) {
       whileHover={{ y: -8 }}
     >
       <div
-        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500"
+        className="pointer-events-none absolute inset-0 rounded-xl transition-opacity duration-500"
         style={{
           background: `radial-gradient(600px circle at 50% 50%, ${brandHex}08, transparent 60%)`,
-          opacity: hover ? 1 : 0,
+          opacity: active ? 1 : 0,
         }}
       />
 
@@ -62,14 +63,14 @@ function TiltCard({ brand, href, target, icon, title, description, cta }) {
         <div
           className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border text-lg transition-all duration-500"
           style={{
-            borderColor: hover ? `${brandHex}40` : 'var(--color-border)',
-            background: hover ? `${brandHex}15` : 'transparent',
-            transform: hover ? 'rotate(-8deg) scale(1.1)' : 'rotate(0deg) scale(1)',
+            borderColor: active ? `${brandHex}40` : 'var(--color-border)',
+            background: active ? `${brandHex}15` : 'transparent',
+            transform: active ? 'rotate(-8deg) scale(1.1)' : 'rotate(0deg) scale(1)',
           }}
         >
           <span
             className="transition-colors duration-500"
-            style={{ color: hover ? brandHex : 'var(--color-accent)' }}
+            style={{ color: active ? brandHex : 'var(--color-accent)' }}
           >
             {icon}
           </span>
@@ -77,7 +78,7 @@ function TiltCard({ brand, href, target, icon, title, description, cta }) {
 
         <h3
           className="text-sm font-semibold transition-colors duration-500"
-          style={{ color: hover ? brandHex : 'var(--color-text)' }}
+          style={{ color: active ? brandHex : 'var(--color-text)' }}
         >
           {title}
         </h3>
@@ -86,15 +87,15 @@ function TiltCard({ brand, href, target, icon, title, description, cta }) {
         <div className="mt-4 flex items-center gap-1.5 text-xs font-medium">
           <span
             className="transition-colors duration-500"
-            style={{ color: hover ? brandHex : 'var(--color-accent)' }}
+            style={{ color: active ? brandHex : 'var(--color-accent)' }}
           >
             {cta}
           </span>
           <span
             className="inline-block transition-all duration-500"
             style={{
-              transform: hover ? 'translateX(6px)' : 'translateX(0)',
-              color: hover ? brandHex : 'var(--color-accent)',
+              transform: active ? 'translateX(6px)' : 'translateX(0)',
+              color: active ? brandHex : 'var(--color-accent)',
             }}
           >
             →
@@ -105,10 +106,10 @@ function TiltCard({ brand, href, target, icon, title, description, cta }) {
       <div
         className="pointer-events-none absolute inset-0 rounded-xl transition-opacity duration-500"
         style={{
-          boxShadow: hover
+          boxShadow: active
             ? `0 24px 48px -12px ${brandHex}30, 0 8px 24px -8px ${brandHex}20, inset 0 1px 0 ${brandHex}15`
             : '0 0 0 0 transparent',
-          opacity: hover ? 1 : 0,
+          opacity: active ? 1 : 0,
         }}
       />
     </motion.a>
@@ -142,6 +143,28 @@ function BriefcaseIcon() {
 export function Footer() {
   const { data } = useLanguage()
   const year = new Date().getFullYear()
+  const [highlightIndex, setHighlightIndex] = useState(-1)
+
+  useEffect(() => {
+    const handler = () => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+      setTimeout(() => setHighlightIndex(0), 500)
+    }
+    window.addEventListener('start-contact-highlight', handler)
+    return () => window.removeEventListener('start-contact-highlight', handler)
+  }, [])
+
+  useEffect(() => {
+    if (highlightIndex < 0) return
+    const timer = setTimeout(() => {
+      if (highlightIndex >= 2) {
+        setHighlightIndex(-1)
+      } else {
+        setHighlightIndex(highlightIndex + 1)
+      }
+    }, 800)
+    return () => clearTimeout(timer)
+  }, [highlightIndex])
 
   const cards = [
     {
@@ -193,8 +216,8 @@ export function Footer() {
         </motion.h2>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {cards.map((card) => (
-            <TiltCard key={card.brand} {...card} />
+          {cards.map((card, i) => (
+            <TiltCard key={card.brand} {...card} highlighted={highlightIndex === i} />
           ))}
         </div>
 

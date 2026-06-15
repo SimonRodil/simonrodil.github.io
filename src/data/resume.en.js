@@ -25,7 +25,7 @@ export const resume = {
   nav: [
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
+    { id: 'education', label: 'Education & Certifications' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ],
@@ -119,9 +119,12 @@ export const resume = {
   ],
   labels: {
     downloadPdf: 'Download CV',
+    downloadModalTitle: '⚠️ Notice',
+    downloadModalMessage: 'As a good programmer, this resume might not have my latest records, experiences, projects, and personal data. For more certainty, go to the contact area and send me an email; I would be happy to send you the latest information. If you still want to see the latest CV hosted on this website, you can.',
+    contactMe: 'Contact me',
     about: 'About',
     experience: 'Experience',
-    education: 'Education',
+    education: 'Education & Certifications',
     projects: 'Projects',
     contact: 'Contact',
     skills: 'Skills',

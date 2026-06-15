@@ -7,6 +7,7 @@ export function ProjectCard({ project, index }) {
   const [open, setOpen] = useState(false)
   const [imgIndex, setImgIndex] = useState(0)
   const touchStartX = useRef(0)
+  const lastSwipeTime = useRef(0)
 
   const images = project.images?.length
     ? project.images
@@ -36,12 +37,14 @@ export function ProjectCard({ project, index }) {
   const handleTouchEnd = (e) => {
     const diff = touchStartX.current - e.changedTouches[0].clientX
     if (Math.abs(diff) > 50) {
+      lastSwipeTime.current = Date.now()
       if (diff > 0) nextImage(e)
       else prevImage(e)
     }
   }
 
   const closeModal = () => {
+    if (Date.now() - lastSwipeTime.current < 300) return
     setOpen(false)
     setImgIndex(0)
   }
@@ -121,7 +124,7 @@ export function ProjectCard({ project, index }) {
             >
               {images.length > 0 && (
                 <div
-                  className="relative"
+                  className="relative touch-pan-y"
                   onTouchStart={handleTouchStart}
                   onTouchEnd={handleTouchEnd}
                 >
