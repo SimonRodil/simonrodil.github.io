@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AnimatedCounter } from './components/AnimatedCounter'
+import { SEO } from './components/SEO'
 import { BorderFlow } from './components/BorderFlow'
 import { ExperienceTimeline } from './components/ExperienceTimeline'
 import { Footer } from './components/Footer'
@@ -140,6 +141,7 @@ export default function App() {
     <UniverseProvider>
       <LanguageProvider>
         <div className="relative min-h-screen overflow-x-hidden">
+          <SEO />
           <BackgroundLayer />
 
           <div className="relative z-10">

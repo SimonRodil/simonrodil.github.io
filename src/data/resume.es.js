@@ -2,6 +2,9 @@ export const resume = {
   meta: {
     locale: 'es',
     pdfPath: 'resume-es.pdf',
+    title: 'Simón Rodil — CV Portafolio',
+    description:
+      'Simón Rodil — Desarrollador Web y Técnico de CRM. CV portafolio con experiencia en React, desarrollo CRM y web full-stack.',
   },
   name: 'Simon Rodil',
   title: 'Desarrollador Web y Técnico de CRM',
