@@ -36,9 +36,9 @@ export const resume = {
     { value: 8, suffix: '+', label: 'Programming Languages' },
   ],
   skills: {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.JS', 'Python', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript', 'SSJS'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.JS', 'Python', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript'],
     backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
-    crm: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce'],
+    crm: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce', 'Journey Builder', 'Automation Studio', 'Cloud Pages', 'Data Extensions', 'SSJS', 'SOAP/REST API'],
     tools: ['Figma', 'Photoshop', 'Git', 'Claude'],
   },
   languages: [
@@ -54,9 +54,9 @@ export const resume = {
       bullets: [
         'WordPress Solutions Development for Website Customization.',
         'Managing Shopify templates for online store customization.',
-        'Development of responsive email templates compatible with major CRM platforms.',
-        'Using APIs for campaigns and workflows/journeys in CRMs like Iterable and Salesforce.',
-        'I collaborate on design and strategy to deliver HTML with AMPScript ready for customization.',
+        'Development of responsive email templates and Cloud Pages compatible with major CRM platforms.',
+        'Using SOAP/REST APIs, Journey Builder, and Automation Studio for campaigns and automated journeys in CRMs like Iterable and Salesforce.',
+        'I collaborate on design and strategy to deliver HTML with AMPScript and SSJS ready for customization.',
       ],
     },
     {
