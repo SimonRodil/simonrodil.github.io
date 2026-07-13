@@ -8,6 +8,7 @@ export function BackgroundGlow() {
     const finePointer = window.matchMedia('(pointer: fine)').matches
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const wide = window.innerWidth >= 1024
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEnabled(finePointer && !reduced && wide)
 
     const onMove = (event) => {

@@ -10,6 +10,7 @@ export function useTypingEffect(words, typingSpeed = 80, pauseMs = 1800) {
 
   useEffect(() => {
     if (reduced || words.length === 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDisplay(words[0] ?? '')
       return
     }

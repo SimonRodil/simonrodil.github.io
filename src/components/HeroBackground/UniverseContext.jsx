@@ -31,7 +31,7 @@ export function UniverseProvider({ children }) {
       } else {
         localStorage.removeItem(STORAGE_KEY)
       }
-    } catch {}
+    } catch { /* localStorage unavailable */ }
   }, [selectedUniverse])
 
   const selectUniverse = useCallback((id) => {
@@ -46,6 +46,7 @@ export function UniverseProvider({ children }) {
   return <UniverseContext.Provider value={value}>{children}</UniverseContext.Provider>
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useUniverse() {
   const ctx = useContext(UniverseContext)
   if (!ctx) throw new Error('useUniverse must be used within UniverseProvider')

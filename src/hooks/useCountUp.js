@@ -14,6 +14,7 @@ export function useCountUp(target, duration = 1400, start = false) {
     if (!start) return
 
     if (reduced) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setValue(target)
       return
     }

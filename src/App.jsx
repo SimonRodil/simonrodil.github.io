@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+
 import { AnimatePresence, motion } from 'framer-motion'
 import { AnimatedCounter } from './components/AnimatedCounter'
 import { SEO } from './components/SEO'
@@ -7,6 +7,7 @@ import { ExperienceTimeline } from './components/ExperienceTimeline'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { TechMarquee } from './components/TechMarquee'
 import { ProjectCard } from './components/ProjectCard'
 import { Section } from './components/Section'
 import { Sidebar } from './components/Sidebar'
@@ -57,6 +58,7 @@ function MainContent() {
         transition={{ duration: 0.35 }}
       >
         <Hero onContactClick={() => window.dispatchEvent(new CustomEvent('start-contact-highlight'))} />
+        <TechMarquee />
 
         <div className="mx-auto max-w-6xl px-4 md:px-6">
           <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:gap-16">
@@ -117,26 +119,6 @@ function MainContent() {
 }
 
 export default function App() {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 767px)')
-
-    const updateIsMobile = (e) => {
-      setIsMobile(e.matches)
-    }
-
-    setIsMobile(mediaQuery.matches)
-
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener('change', updateIsMobile)
-      return () => mediaQuery.removeEventListener('change', updateIsMobile)
-    }
-
-    mediaQuery.addListener(updateIsMobile)
-    return () => mediaQuery.removeListener(updateIsMobile)
-  }, [])
-
   return (
     <UniverseProvider>
       <LanguageProvider>

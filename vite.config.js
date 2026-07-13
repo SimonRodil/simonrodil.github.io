@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import sharp from 'sharp'
 import { resolve } from 'path'
 import { writeFile } from 'fs/promises'
+import { Buffer } from 'buffer'
 
 function profilePlugin() {
   const SIZE = 512
@@ -11,9 +12,6 @@ function profilePlugin() {
   const SRC = resolve('public/avatar_v2.jpg')
 
   async function generateCircular() {
-    const { width, height } = await sharp(SRC).metadata()
-    const size = Math.min(width, height)
-
     const circle = Buffer.from(
       `<svg><circle cx="${SIZE / 2}" cy="${SIZE / 2}" r="${SIZE / 2}" fill="white"/></svg>`,
     )
