@@ -39,10 +39,10 @@ export const resume = {
     { value: 8, suffix: '+', label: 'Lenguajes de Programación' },
   ],
   skills: {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.JS', 'Python', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript'],
-    backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Vue', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript'],
+    backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify', 'Node.JS', 'Python', 'Ruby'],
     crm: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce', 'Journey Builder', 'Automation Studio', 'Cloud Pages', 'Data Extensions', 'SSJS', 'SOAP/REST API'],
-    tools: ['Figma', 'Photoshop', 'Git', 'Claude'],
+    tools: ['Figma', 'Photoshop', 'Git', 'Codex/OpenAI', 'Claude Code/Anthropic'],
   },
   languages: [
     { name: 'Español', level: 'Nativo' },
@@ -51,15 +51,17 @@ export const resume = {
   ],
   experience: [
     {
-      company: 'CodeCrew',
+      company: 'CodeCrew (CA), USA (Remoto, Teletrabajo)',
       role: 'Desarrollador Frontend',
-      period: '2021 — Actualidad',
+      period: 'Diciembre 2021 — Actualidad',
       bullets: [
-        'Desarrollo de Soluciones en Wordpress para personalizacion de Sitios web.',
-        'Manejo de Plantillas en Shopify para personalizacion de tiendas en linea.',
-        'Desarrollo de plantillas de email responsive y Cloud Pages compatibles con los principales clientes de correo.',
-        'Uso de APIs SOAP/REST, Journey Builder y Automation Studio para campañas y recorridos automatizados en CRMs como Iterable y Salesforce.',
-        'Colaboro con diseño y estrategia para entregar HTML con AMPScript y SSJS listo para su personalización.',
+        'Desarrollo de interfaces web para sitios corporativos y plataformas eCommerce, priorizando rendimiento, responsive design y experiencia de usuario.',
+        'Construcción de componentes y funcionalidades frontend con JavaScript y TypeScript, trabajando con frameworks modernos como React y Vue.js según los requerimientos del proyecto.',
+        'Integración de aplicaciones web con APIs REST/SOAP y servicios externos para conectar la capa de presentación con plataformas CRM y herramientas de negocio.',
+        'Uso de Node.js para tareas de soporte al desarrollo, integraciones, automatización de procesos y manejo de lógica complementaria en entornos web.',
+        'Gestión de dependencias y automatizaciones del entorno mediante Ruby y gems en flujos de trabajo asociados al desarrollo, testing y mantenimiento de proyectos digitales.',
+        'Desarrollo de experiencias interactivas, formularios y páginas orientadas a captación, conversión y navegación fluida en entornos web y marketing.',
+        'Implementación de personalización avanzada en Salesforce Marketing Cloud mediante AMPscript y SSJS para campañas dinámicas y contenido segmentado, incluyendo Journey Builder, Automation Studio y Cloud Pages integrados con Salesforce, Mailchimp, Klaviyo, Braze, Iterable y HubSpot.',
       ],
     },
     {

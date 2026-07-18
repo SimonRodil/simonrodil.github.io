@@ -39,10 +39,10 @@ export const resume = {
     { value: 8, suffix: '+', label: 'Programming Languages' },
   ],
   skills: {
-    frontend: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.JS', 'Python', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript'],
-    backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify'],
+    frontend: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Vue', 'Tailwind CSS', 'Bootstrap', 'Liquid', 'Ampscript'],
+    backend: ['PHP', 'Laravel', 'SQL', 'WordPress', 'Shopify', 'Node.JS', 'Python', 'Ruby'],
     crm: ['Klaviyo', 'Braze', 'Iterable', 'HubSpot', 'Mailchimp', 'MJML', 'Salesforce', 'Journey Builder', 'Automation Studio', 'Cloud Pages', 'Data Extensions', 'SSJS', 'SOAP/REST API'],
-    tools: ['Figma', 'Photoshop', 'Git', 'Claude'],
+    tools: ['Figma', 'Photoshop', 'Git', 'Codex/OpenAI', 'Claude Code/Anthropic'],
   },
   languages: [
     { name: 'Spanish', level: 'Native' },
@@ -51,15 +51,17 @@ export const resume = {
   ],
   experience: [
     {
-      company: 'CodeCrew',
+      company: 'CodeCrew (CA), USA (Remote)',
       role: 'Frontend Developer',
-      period: '2021 — Present',
+      period: 'Dec 2021 — Present',
       bullets: [
-        'WordPress Solutions Development for Website Customization.',
-        'Managing Shopify templates for online store customization.',
-        'Development of responsive email templates and Cloud Pages compatible with major CRM platforms.',
-        'Using SOAP/REST APIs, Journey Builder, and Automation Studio for campaigns and automated journeys in CRMs like Iterable and Salesforce.',
-        'I collaborate on design and strategy to deliver HTML with AMPScript and SSJS ready for customization.',
+        'Development of web interfaces for corporate websites and eCommerce platforms, prioritizing performance, responsive design, and user experience.',
+        'Building frontend components and functionalities with JavaScript and TypeScript, working with modern frameworks like React and Vue.js based on project requirements.',
+        'Integration of web applications with REST/SOAP APIs and external services to connect the presentation layer with CRM platforms and business tools.',
+        'Using Node.js for development support tasks, integrations, process automation, and complementary logic handling in web environments.',
+        'Managing dependencies and environment automations using Ruby and gems in workflows associated with development, testing, and maintenance of digital projects.',
+        'Development of interactive experiences, forms, and pages focused on acquisition, conversion, and smooth navigation in web and marketing environments.',
+        'Advanced customization in Salesforce Marketing Cloud using AMPscript and SSJS for dynamic campaigns and segmented content, including Journey Builder, Automation Studio, and Cloud Pages integrated with Salesforce, Mailchimp, Klaviyo, Braze, Iterable, and HubSpot.',
       ],
     },
     {
